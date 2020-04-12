@@ -1,0 +1,431 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD17\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2020-04-13</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:47</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc" class="file"><acronym title="C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc">C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">33</td></tr>
+</table>
+</td>
+</table><a name="IDZGDUI5VAJHKSPAQGS2VOKUOWVOMRRXYWZC4BIQIU41C5F1Z5KO4"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFX01PIUSARTTGQEINXI30TWN1BUZDWQCZFUFK4HKZNXATMDPVFOG">Clearance Constraint (Gap=0.2mm) (All),(All)</a></td>
+<td class="column2">30</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID30AXFRVXUTOCM01MLKDVLA2FFD44YO2RAYRVDICJ4RN03AADZWRH">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCDJN3WFE11JVNDAOQCLOJVKGEEDGVK5TEMJGD2H0WP5S45QHMGUO">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTHHD40WMBBU1IGWCF1554Q4GHEDE13B0STZZXNHOZNAQMU41Q14L">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDO5EAMXJC4MW2NTOTLEIAEEPTBKJ1XEKWBPDVK2P5PRKKVMTBEPUI">Width Constraint (Min=0.203mm) (Max=0.254mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJ2TV0NEAMU2WFWUUVXMQOO2I2F3M1XYK4U0BG2DYHOLLBF4FCEBJ">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUPFTTPDQG5L3BPMYJEAS4MUMHJKRFGDSP5YLZTIXSATPZIYJZQCJ">Hole Size Constraint (Min=0.025mm) (Max=20mm) (All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDJJFHZBPOFCTTPXZUIQCZEIKIHF14VLPAUDZAADPY2B4GUZVDY3ZN">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDO1QWN1DXJEHCL13E2NZALDC50OYV3E3VQYMGMUG3S33EORWT12BL">Matched Lengths(Tolerance=0.127mm) (All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOBNGSJRHUS3IHQ2ZPCN4YLUHJP1C1QENW33KLCEYQURG1F4DRJ">Matched Lengths(Tolerance=0.127mm) (All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCC2LFID4LG5NNIUEHYN0UFBA4KZGZCW0O2YLFFIYLT2PFACVFCZF">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">33</td>
+</tr>
+</table><br><a name="IDFX01PIUSARTTGQEINXI30TWN1BUZDWQCZFUFK4HKZNXATMDPVFOG"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=0.2mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44537.35mil|Location2.X=44546.474mil|Location1.Y=14480.162mil|Location2.Y=14489.286mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44537.35mil|Location2.X=44546.474mil|Location1.Y=14480.162mil|Location2.Y=14489.286mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-29(-22.479mm,56.523mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44537.35mil|Location2.X=44546.474mil|Location1.Y=14499.847mil|Location2.Y=14508.971mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44537.35mil|Location2.X=44546.474mil|Location1.Y=14499.847mil|Location2.Y=14508.971mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-30(-22.479mm,57.023mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44531.937mil|Location2.X=44541.061mil|Location1.Y=14544.631mil|Location2.Y=14553.755mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44531.937mil|Location2.X=44541.061mil|Location1.Y=14544.631mil|Location2.Y=14553.755mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-1(-23.129mm,58.673mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44512.252mil|Location2.X=44521.376mil|Location1.Y=14544.631mil|Location2.Y=14553.755mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44512.252mil|Location2.X=44521.376mil|Location1.Y=14544.631mil|Location2.Y=14553.755mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-2(-23.629mm,58.673mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44472.882mil|Location2.X=44482.006mil|Location1.Y=14544.631mil|Location2.Y=14553.755mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44472.882mil|Location2.X=44482.006mil|Location1.Y=14544.631mil|Location2.Y=14553.755mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-4(-24.629mm,58.673mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44453.197mil|Location2.X=44462.321mil|Location1.Y=14544.631mil|Location2.Y=14553.755mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44453.197mil|Location2.X=44462.321mil|Location1.Y=14544.631mil|Location2.Y=14553.755mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-5(-25.129mm,58.673mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44433.512mil|Location2.X=44442.636mil|Location1.Y=14544.631mil|Location2.Y=14553.755mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44433.512mil|Location2.X=44442.636mil|Location1.Y=14544.631mil|Location2.Y=14553.755mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-6(-25.629mm,58.673mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44413.827mil|Location2.X=44422.951mil|Location1.Y=14544.631mil|Location2.Y=14553.755mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44413.827mil|Location2.X=44422.951mil|Location1.Y=14544.631mil|Location2.Y=14553.755mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-7(-26.129mm,58.673mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44394.142mil|Location2.X=44403.266mil|Location1.Y=14544.631mil|Location2.Y=14553.755mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44394.142mil|Location2.X=44403.266mil|Location1.Y=14544.631mil|Location2.Y=14553.755mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-8(-26.629mm,58.673mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44388.728mil|Location2.X=44397.852mil|Location1.Y=14539.217mil|Location2.Y=14548.341mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44388.728mil|Location2.X=44397.852mil|Location1.Y=14539.217mil|Location2.Y=14548.341mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-9(-27.279mm,58.023mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44388.728mil|Location2.X=44397.852mil|Location1.Y=14519.532mil|Location2.Y=14528.656mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44388.728mil|Location2.X=44397.852mil|Location1.Y=14519.532mil|Location2.Y=14528.656mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-10(-27.279mm,57.523mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44388.728mil|Location2.X=44397.852mil|Location1.Y=14499.847mil|Location2.Y=14508.971mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44388.728mil|Location2.X=44397.852mil|Location1.Y=14499.847mil|Location2.Y=14508.971mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-11(-27.279mm,57.023mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44388.728mil|Location2.X=44397.852mil|Location1.Y=14480.162mil|Location2.Y=14489.286mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44388.728mil|Location2.X=44397.852mil|Location1.Y=14480.162mil|Location2.Y=14489.286mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-12(-27.279mm,56.523mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44388.728mil|Location2.X=44397.852mil|Location1.Y=14460.477mil|Location2.Y=14469.601mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44388.728mil|Location2.X=44397.852mil|Location1.Y=14460.477mil|Location2.Y=14469.601mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-13(-27.279mm,56.023mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44388.728mil|Location2.X=44397.852mil|Location1.Y=14440.792mil|Location2.Y=14449.916mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44388.728mil|Location2.X=44397.852mil|Location1.Y=14440.792mil|Location2.Y=14449.916mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-14(-27.279mm,55.523mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44388.728mil|Location2.X=44397.852mil|Location1.Y=14421.107mil|Location2.Y=14430.231mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44388.728mil|Location2.X=44397.852mil|Location1.Y=14421.107mil|Location2.Y=14430.231mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-15(-27.279mm,55.023mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44388.728mil|Location2.X=44397.852mil|Location1.Y=14401.422mil|Location2.Y=14410.546mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44388.728mil|Location2.X=44397.852mil|Location1.Y=14401.422mil|Location2.Y=14410.546mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-16(-27.279mm,54.523mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44394.142mil|Location2.X=44403.266mil|Location1.Y=14396.009mil|Location2.Y=14405.133mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44394.142mil|Location2.X=44403.266mil|Location1.Y=14396.009mil|Location2.Y=14405.133mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-17(-26.629mm,53.873mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44413.827mil|Location2.X=44422.951mil|Location1.Y=14396.009mil|Location2.Y=14405.133mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44413.827mil|Location2.X=44422.951mil|Location1.Y=14396.009mil|Location2.Y=14405.133mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-18(-26.129mm,53.873mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44433.512mil|Location2.X=44442.636mil|Location1.Y=14396.009mil|Location2.Y=14405.133mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44433.512mil|Location2.X=44442.636mil|Location1.Y=14396.009mil|Location2.Y=14405.133mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-19(-25.629mm,53.873mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44453.197mil|Location2.X=44462.321mil|Location1.Y=14396.009mil|Location2.Y=14405.133mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44453.197mil|Location2.X=44462.321mil|Location1.Y=14396.009mil|Location2.Y=14405.133mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-20(-25.129mm,53.873mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44472.882mil|Location2.X=44482.006mil|Location1.Y=14396.009mil|Location2.Y=14405.133mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44472.882mil|Location2.X=44482.006mil|Location1.Y=14396.009mil|Location2.Y=14405.133mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-21(-24.629mm,53.873mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44492.567mil|Location2.X=44501.691mil|Location1.Y=14396.009mil|Location2.Y=14405.133mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44492.567mil|Location2.X=44501.691mil|Location1.Y=14396.009mil|Location2.Y=14405.133mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-22(-24.129mm,53.873mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44512.252mil|Location2.X=44521.376mil|Location1.Y=14396.009mil|Location2.Y=14405.133mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44512.252mil|Location2.X=44521.376mil|Location1.Y=14396.009mil|Location2.Y=14405.133mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-23(-23.629mm,53.873mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44531.937mil|Location2.X=44541.061mil|Location1.Y=14396.009mil|Location2.Y=14405.133mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44531.937mil|Location2.X=44541.061mil|Location1.Y=14396.009mil|Location2.Y=14405.133mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-24(-23.129mm,53.873mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44537.35mil|Location2.X=44546.474mil|Location1.Y=14401.422mil|Location2.Y=14410.546mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44537.35mil|Location2.X=44546.474mil|Location1.Y=14401.422mil|Location2.Y=14410.546mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-25(-22.479mm,54.523mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44537.35mil|Location2.X=44546.474mil|Location1.Y=14421.107mil|Location2.Y=14430.231mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44537.35mil|Location2.X=44546.474mil|Location1.Y=14421.107mil|Location2.Y=14430.231mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-26(-22.479mm,55.023mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44537.35mil|Location2.X=44546.474mil|Location1.Y=14440.792mil|Location2.Y=14449.916mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44537.35mil|Location2.X=44546.474mil|Location1.Y=14440.792mil|Location2.Y=14449.916mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-27(-22.479mm,55.523mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44537.35mil|Location2.X=44546.474mil|Location1.Y=14519.532mil|Location2.Y=14528.656mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44537.35mil|Location2.X=44546.474mil|Location1.Y=14519.532mil|Location2.Y=14528.656mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-31(-22.479mm,57.523mm) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44537.35mil|Location2.X=44546.474mil|Location1.Y=14539.217mil|Location2.Y=14548.341mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44537.35mil|Location2.X=44546.474mil|Location1.Y=14539.217mil|Location2.Y=14548.341mil|Absolute=True">Clearance Constraint: (0.175mm &lt; 0.2mm) Between Pad U301-28(-24.879mm,56.273mm) on Component Side And Pad U301-32(-22.479mm,58.023mm) on Component Side </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDUPFTTPDQG5L3BPMYJEAS4MUMHJKRFGDSP5YLZTIXSATPZIYJZQCJ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=0.025mm) (Max=20mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=35899.221mil|Location2.X=43774.486mil|Location1.Y=9809.572mil|Location2.Y=17684.838mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=35899.221mil|Location2.X=43774.486mil|Location1.Y=9809.572mil|Location2.Y=17684.838mil|Absolute=True">Hole Size Constraint: (200mm &gt; 20mm) Pad Free-(-142.5mm,37.79mm) on Multi-Layer Actual Slot Hole Width = 200mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDO1QWN1DXJEHCL13E2NZALDC50OYV3E3VQYMGMUG3S33EORWT12BL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Matched Lengths(Tolerance=0.127mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44541.357mil|Location2.X=44901.247mil|Location1.Y=14474.724mil|Location2.Y=14590.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44541.357mil|Location2.X=44901.247mil|Location1.Y=14474.724mil|Location2.Y=14590.142mil|Absolute=True">Matched Net Lengths: Between Net D_PRE_P And Net D_PRE_N Actual Difference against D_PRE_N is: 0.299mm, Tolerance : 0.127mm. </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDOBNGSJRHUS3IHQ2ZPCN4YLUHJP1C1QENW33KLCEYQURG1F4DRJ"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Matched Lengths(Tolerance=0.127mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44541.357mil|Location2.X=44901.247mil|Location1.Y=14474.724mil|Location2.Y=14590.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Stefan\Documents\git\pure60\pure60-WKL\pure60-WKL.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=44541.357mil|Location2.X=44901.247mil|Location1.Y=14474.724mil|Location2.Y=14590.142mil|Absolute=True">Matched Net Lengths: Between Net D_PRE_P And Net D_PRE_N Actual Difference against D_PRE_N is: 0.299mm, Tolerance : 0.127mm. </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
