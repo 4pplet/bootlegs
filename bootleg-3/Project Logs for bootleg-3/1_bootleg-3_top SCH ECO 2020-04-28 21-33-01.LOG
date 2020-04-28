@@ -1,0 +1,15 @@
+Change Component Footprint: Designator=S257 Old Footprint=MX-switch - 1.5u MOD-L New Footprint=SMK-switch - 1.5u MOD-L
+Change Component Footprint: Designator=S260 Old Footprint=MX-switch - 1.5u MOD-L New Footprint=SMK-switch - 1.5u MOD-L
+Change Component Footprint: Designator=S265 Old Footprint=MX-switch - 1.5u MOD-R New Footprint=SMK-SWITCH - 1.5U MOD-R
+Change Component Footprint: Designator=S266 Old Footprint=MX-switch - 1.5u MOD-R New Footprint=SMK-switch - 1.5u MOD-R
+Change Component Footprint: Designator=S258 Old Footprint=MX-switch - 1u MOD-L New Footprint=SMK-switch - 1u MOD-L
+Change Component Footprint: Designator=S264 Old Footprint=MX-switch - 1u MOD-R New Footprint=SMK-switch - 1u MOD-R
+Change Component Footprint: Designator=S259 Old Footprint=MX-switch - backspace New Footprint=SMK-switch - backspace
+Change Component Footprint: Designator=S229 Old Footprint=MX-switch - CAPS New Footprint=SMK-switch - CAPS - dual
+Change Component Footprint: Designator=S242 Old Footprint=MX-switch - Enter_ANSI_ISO_KEY New Footprint=SMK-switch - Enter_ANSI_ISO_KEY
+Change Component Footprint: Designator=S243 Old Footprint=MX-switch - Left shift New Footprint=SMK-switch - Left shift v2
+Change Component Footprint: Designator=S270 Old Footprint=MX-switch - L split space_V2 New Footprint=SMK-switch - L split space_V2
+Change Component Footprint: Designator=S228 Old Footprint=MX-switch - PIPE_ISO_ENTER New Footprint=SMK-switch - PIPE_ISO_ENTER
+Change Component Footprint: Designator=S256 Old Footprint=MX-switch - right shift New Footprint=SMK-switch - right shift v2
+Change Component Footprint: Designator=S268 Old Footprint=MX-switch - R split space_V2 New Footprint=SMK-switch - R split space_V2
+Change Component Footprint: Designator=S262 Old Footprint=MX-switch - Space_V3 New Footprint=SMK-switch - Space_V3
