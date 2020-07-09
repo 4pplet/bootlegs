@@ -1,6 +1,0 @@
-Removed Pin From Net: NetName=col11 Pin=S261-2
-Removed Pin From Net: NetName=col6 Pin=S263-2
-Added Pin To Net: NetName=NetD229_1 Pin=S229-1
-Added Pin To Net: NetName=col1 Pin=S229-2
-Added Pin To Net: NetName=col6 Pin=S261-2
-Added Pin To Net: NetName=col11 Pin=S263-2
