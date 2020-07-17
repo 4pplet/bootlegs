@@ -11,7 +11,6 @@
 
 ## BOOTLEG-1: 
 ![alt text](./readme-images/bootleg-1_rev_a2_top.jpg "PCB View - Rev A")
-![alt text](./readme-images/bootleg-1_rev_a2_bot.jpg "PCB View - Rev A")
 
 # BOOTLEG-2
 - USB-C
@@ -25,7 +24,6 @@
 
 ## BOOTLEG-2: 
 ![alt text](./readme-images/bootleg-2_rev_a2_top.jpg "PCB View - Rev A")
-![alt text](./readme-images/bootleg-2_rev_a2_bot.jpg "PCB View - Rev A")
 
 # BOOTLEG-3
 - USB-C
@@ -39,7 +37,6 @@
 
 ## BOOTLEG-3: 
 ![alt text](./readme-images/bootleg-3_rev_a2_top.jpg "PCB View - Rev A")
-![alt text](./readme-images/bootleg-3_rev_a2_bot.jpg "PCB View - Rev A")
 
 ## Disclaimer:
 Project is open source, I take no responsibility for others using these files.
