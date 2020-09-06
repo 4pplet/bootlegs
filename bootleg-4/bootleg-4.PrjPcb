@@ -123,7 +123,7 @@ GenerateClassCluster=0
 DocumentUniqueId=UMAPLPXN
 
 [Document6]
-DocumentPath=bootleg-4.PcbDoc
+DocumentPath=bootleg-4 - plate.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -140,6 +140,23 @@ GenerateClassCluster=0
 DocumentUniqueId=UQQMBOXI
 
 [Document7]
+DocumentPath=bootleg-4.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=RYHRRMRD
+
+[Document8]
 DocumentPath=bootleg-4.OutJob
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -156,7 +173,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document8]
+[Document9]
 DocumentPath=bootleg-4.PrjPcbStructure
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -174,6 +191,62 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [GeneratedDocument1]
+DocumentPath=Project Outputs for alps-cherry\2020-09-06\Copy of NC Drill Files\bootleg-4 - plate.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=Project Outputs for alps-cherry\2020-09-06\Copy of Gerber Files\bootleg-4 - plate.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument3]
+DocumentPath=Project Outputs for alps-cherry\2020-09-06\Copy of Gerber Files\bootleg-4 - plate.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=Project Outputs for alps-cherry\2020-09-06\Copy of Gerber Files\bootleg-4 - plate.GBO
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=Project Outputs for alps-cherry\2020-09-06\Copy of Gerber Files\bootleg-4 - plate.GBS
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=Project Outputs for alps-cherry\2020-09-06\Copy of Gerber Files\bootleg-4 - plate.GM1
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=Project Outputs for alps-cherry\2020-09-06\Copy of Gerber Files\bootleg-4 - plate.GM16
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=Project Outputs for alps-cherry\2020-09-06\Copy of Gerber Files\bootleg-4 - plate.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=Project Outputs for alps-cherry\2020-09-06\Copy of Gerber Files\bootleg-4 - plate.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=Project Outputs for alps-cherry\2020-09-06\Copy of Gerber Files\bootleg-4 - plate.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=Project Outputs for alps-cherry\2020-09-06\Copy of NC Drill Files\bootleg-4 - plate.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=Project Outputs for alps-cherry\2020-09-06\Copy of Gerber Files\bootleg-4 - plate.REP
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=Project Outputs for alps-cherry\2020-09-06\Copy of Gerber Files\bootleg-4 - plate.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=Project Outputs for alps-cherry\2020-09-06\Copy of NC Drill Files\bootleg-4 - plate.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument15]
 DocumentPath=Project Outputs for alps-cherry\Design Rule Check - bootleg-4.html
 DItemRevisionGUID=
 
