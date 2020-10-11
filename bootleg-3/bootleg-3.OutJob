@@ -15,7 +15,7 @@ LifeCycleDefinitionGUID=
 RevisionNamingSchemeGUID=
 
 [OutputGroup1]
-Name=Job1.OutJob
+Name=bootleg-3.OutJob
 Description=
 TargetOutputMedium=Prints
 VariantName=[No Variations]
@@ -212,7 +212,7 @@ ShowComponentParameters2=1
 GlobalBookmarks2=0
 PDFACompliance2=Disabled
 PDFVersion2=Default
-OutputFilePath3=C:\Users\Stefan\Documents\GitHub\Steezy60\Steezy60-ALPS\Project Outputs for alps-cherry\2020-10-10\
+OutputFilePath3=C:\Users\Stefan\Documents\GitHub\bootlegs\bootleg-3\Project Outputs for alps-cherry\2020-10-11\
 ReleaseManaged3=1
 OutputBasePath3=Project Outputs for alps-cherry
 OutputPathMedia3==CurrentDate
@@ -283,7 +283,7 @@ PDFVersion5=Default
 [GeneratedFilesSettings]
 RelativeOutputPath2=C:\Users\Stefan\Documents\git\Steezy60-ALPS\Project Outputs for alps-cherry\2019-11-30\Job1.PDF
 OpenOutputs2=0
-RelativeOutputPath3=C:\Users\Stefan\Documents\GitHub\Steezy60\Steezy60-ALPS\Project Outputs for alps-cherry\2020-10-10\
+RelativeOutputPath3=C:\Users\Stefan\Documents\GitHub\bootlegs\bootleg-3\Project Outputs for alps-cherry\2020-10-11\
 OpenOutputs3=0
 AddToProject3=0
 TimestampFolder3=0

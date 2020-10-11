@@ -15,7 +15,7 @@ LifeCycleDefinitionGUID=
 RevisionNamingSchemeGUID=
 
 [OutputGroup1]
-Name=Job1.OutJob
+Name=bootleg-4.OutJob
 Description=
 TargetOutputMedium=Prints
 VariantName=[No Variations]
