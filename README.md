@@ -6,10 +6,10 @@
 - ATmega32U2
 - Prophet style flex cuts
 
-## Layout support for BOOTLEG-1: 
+## Layout support for BOOTLEG-1 rev B1: 
 ![alt text](./readme-images/layout_support_bootleg-1_rev_B1.jpg "Layout support")
 
-## BOOTLEG-1: 
+## View of PCB rev B1: 
 ![alt text](./readme-images/bootleg-1_rev_B1.jpg "PCB View - Rev B")
 
 # BOOTLEG-2
@@ -18,10 +18,10 @@
 - ATmega32U2
 - Prophet style flex cuts
 
-## Layout support for BOOTLEG-2: 
+## Layout support for BOOTLEG-2 rev B1: 
 ![alt text](./readme-images/layout_support_bootleg-2_rev_B1.jpg "Layout support")
 
-## BOOTLEG-2: 
+## View of PCB, rev B1: 
 ![alt text](./readme-images/bootleg-2_rev_B1.jpg "PCB View - Rev B")
 
 # BOOTLEG-3
@@ -31,10 +31,10 @@
 - Prophet style flex cuts
 - Intended for use with Cherry-keycaps, will work with modern Alps keycaps if using Alps-mount SMK.
 
-## Layout support for BOOTLEG-3: 
+## Layout support for BOOTLEG-3 rev B1: 
 ![alt text](./readme-images/layout_support_bootleg-3_rev_B1.jpg "Layout support")
 
-## BOOTLEG-3: 
+## View of PCB rev B1: 
 ![alt text](./readme-images/bootleg-3_rev_B1.jpg "PCB View - Rev B")
 
 # BOOTLEG-4
@@ -44,10 +44,10 @@
 - No usb-connector, only for daughter board use
 - Limited layout support
 
-## Layout support for BOOTLEG-3: 
+## Layout support for BOOTLEG-4 rev B1: 
 ![alt text](./readme-images/layout_support_bootleg-4_rev_B1.jpg "Layout support")
 
-## BOOTLEG-3: 
+## View of PCB rev B1: 
 ![alt text](./readme-images/bootleg-4_rev_B1.jpg "PCB View - Rev B")
 
 ## Disclaimer:
