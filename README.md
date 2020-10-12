@@ -1,5 +1,7 @@
 # A collection of bootlegs
 
+CAUSION, REVISION B IS UNTESTED AND NO QMK IMPLEMENTATION IS DONE
+
 # BOOTLEG-1
 - USB-C
 - MX switches
