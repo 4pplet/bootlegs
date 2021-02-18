@@ -190,13 +190,17 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SOQGEUBL
 
-[Parameter1]
-Name=Revision
-Value= B1 - MX
+[GeneratedDocument1]
+DocumentPath=Project Outputs for alps-cherry\Design Rule Check - bootleg-1.html
+DItemRevisionGUID=
 
-[Parameter2]
+[Parameter1]
 Name=ProjectTitle
 Value=bootlegs
+
+[Parameter2]
+Name=Revision
+Value=B1 - MX
 
 [Configuration1]
 Name=Sources
