@@ -38,7 +38,7 @@ OutputMedium5_Type=GeneratedFiles
 OutputType1=Gerber
 OutputName1=Gerber Files
 OutputCategory1=Fabrication
-OutputDocumentPath1=bootleg-1.PcbDoc
+OutputDocumentPath1=bootleg-3.PcbDoc
 OutputVariantName1=
 OutputEnabled1=1
 OutputEnabled1_OutputMedium1=0
@@ -52,7 +52,7 @@ Configuration1_Item1=AddToAllLayerClasses.Set= |AddToAllPlots.Set=SerializeLayer
 OutputType2=NC Drill
 OutputName2=NC Drill Files
 OutputCategory2=Fabrication
-OutputDocumentPath2=bootleg-1.PcbDoc
+OutputDocumentPath2=bootleg-3.PcbDoc
 OutputVariantName2=
 OutputEnabled2=1
 OutputEnabled2_OutputMedium1=0
@@ -66,7 +66,7 @@ Configuration2_Item1=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|Ge
 OutputType3=Assembly
 OutputName3=Assembly Drawings
 OutputCategory3=Assembly
-OutputDocumentPath3=bootleg-1.PcbDoc
+OutputDocumentPath3=bootleg-3.PcbDoc
 OutputVariantName3=
 OutputEnabled3=0
 OutputEnabled3_OutputMedium1=0
@@ -88,7 +88,7 @@ PcbPrintPreferences3=
 OutputType4=Pick Place
 OutputName4=Generates pick and place files
 OutputCategory4=Assembly
-OutputDocumentPath4=bootleg-1.PcbDoc
+OutputDocumentPath4=bootleg-3.PcbDoc
 OutputVariantName4=
 OutputEnabled4=1
 OutputEnabled4_OutputMedium1=0
@@ -100,9 +100,9 @@ OutputDefault4=0
 Configuration4_Name1=OutputConfigurationParameter1
 Configuration4_Item1=Record=PickPlaceView|Units=Metric|GenerateCSVFormat=True|GenerateTextFormat=False|ShowUnits=False|Separator=.|ExcludeFilterParam=False|IncludeVariations=True|Filter= |FilterActive=False|Column#1=Name:Designator,Fixed:True,Metric:False,Visible:True,Sort:None,Position:0|Column#2=Name:Comment,Fixed:True,Metric:False,Visible:True,Sort:None,Position:21|Column#3=Name:Layer,Fixed:True,Metric:False,Visible:True,Sort:None,Position:9|Column#4=Name:Footprint,Fixed:True,Metric:False,Visible:True,Sort:None,Position:1|Column#5=Name:Footprint Description,Fixed:True,Metric:False,Visible:False,Sort:None,Position:2|Column#6=Name:Center-X,Fixed:True,Metric:True,Visible:True,Sort:None,Position:3|Column#7=Name:Center-Y,Fixed:True,Metric:True,Visible:True,Sort:None,Position:4|Column#8=Name:Rotation,Fixed:True,Metric:False,Visible:True,Sort:None,Position:10|Column#9=Name:Description,Fixed:True,Metric:False,Visible:False,Sort:None,Position:11|Column#10=Name:ComponentKind,Fixed:True,Metric:False,Visible:False,Sort:None,Position:12|Column#11=Name:Height,Fixed:True,Metric:True,Visible:False,Sort:None,Position:13|Column#12=Name:Ref-X,Fixed:True,Metric:True,Visible:True,Sort:None,Position:5|Column#13=Name:Ref-Y,Fixed:True,Metric:True,Visible:True,Sort:None,Position:6|Column#14=Name:Pad-X,Fixed:True,Metric:True,Visible:True,Sort:None,Position:7|Column#15=Name:Pad-Y,Fixed:True,Metric:True,Visible:True,Sort:None,Position:8|Column#16=Name:Variation,Fixed:True,Metric:False,Visible:False,Sort:None,Position:14|Column#17=Name:Version,Fixed:False,Metric:False,Visible:False,Sort:None,Position:20|Column#18=Name:MRF.Part,Fixed:False,Metric:False,Visible:False,Sort:None,Position:18|Column#19=Name:MFGPN,Fixed:False,Metric:False,Visible:False,Sort:None,Position:17|Column#20=Name:MFG,Fixed:False,Metric:False,Visible:False,Sort:None,Position:16|Column#21=Name:LCSC MFG,Fixed:False,Metric:False,Visible:False,Sort:None,Position:15|Column#22=Name:Value,Fixed:False,Metric:False,Visible:False,Sort:None,Position:19|Column#23=Name:LCSC Part #,Fixed:False,Metric:False,Visible:False,Sort:None,Position:22
 OutputType5=PCB 3D Print
-OutputName5=Bootleg-1 PCB Print
+OutputName5=Bootleg-3 PCB Print
 OutputCategory5=Documentation
-OutputDocumentPath5=bootleg-1.PcbDoc
+OutputDocumentPath5=bootleg-3.PcbDoc
 OutputVariantName5=
 OutputEnabled5=0
 OutputEnabled5_OutputMedium1=0
@@ -132,7 +132,7 @@ Configuration6_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowPr
 OutputType7=BOM_PartType
 OutputName7=Bill of Materials CSV
 OutputCategory7=Report
-OutputDocumentPath7=bootleg-1.PcbDoc
+OutputDocumentPath7=bootleg-3.PcbDoc
 OutputVariantName7=
 OutputEnabled7=1
 OutputEnabled7_OutputMedium1=0
@@ -155,9 +155,9 @@ Configuration7_Item5=Value=100|Designator=100|Footprint=100|Quantity=100|LCSC MF
 Configuration7_Name6=VisibleOrder_Flat
 Configuration7_Item6=Value=100|Designator=100|Footprint=100|Quantity=100|LCSC MFG=100|LCSC Part #=100
 OutputType8=PDF3D
-OutputName8=Bootleg-1 PDF3D
+OutputName8=Bootleg-3 PDF3D
 OutputCategory8=Documentation
-OutputDocumentPath8=bootleg-1.PcbDoc
+OutputDocumentPath8=bootleg-3.PcbDoc
 OutputVariantName8=
 OutputEnabled8=0
 OutputEnabled8_OutputMedium1=0
@@ -172,7 +172,7 @@ Configuration8_Item1=Record=ExportPDF3DSetting|Version=110|Format=0|Flags=8158|S
 OutputType9=ExportSTEP
 OutputName9=Export STEP
 OutputCategory9=Export
-OutputDocumentPath9=bootleg-1.PcbDoc
+OutputDocumentPath9=bootleg-3.PcbDoc
 OutputVariantName9=
 OutputEnabled9=1
 OutputEnabled9_OutputMedium1=0
@@ -187,7 +187,7 @@ Configuration9_Item1=Record=ExportSTEPView|ExportComponentOptions=0|ExportModels
 [PublishSettings]
 OutputFilePath2=C:\Users\Stefan\Documents\git\Steezy60-ALPS\Project Outputs for alps-cherry\2019-11-30\Job1.PDF
 ReleaseManaged2=1
-OutputBasePath2=Project Outputs for alps-cherry
+OutputBasePath2=Project Outputs for Free Documents
 OutputPathMedia2==CurrentDate
 OutputPathMediaValue2==CurrentDate
 OutputPathOutputer2=[Output Type]
@@ -214,7 +214,7 @@ PDFACompliance2=Disabled
 PDFVersion2=Default
 OutputFilePath3=C:\Users\Stefan\Documents\GitHub\AEKISO60\Project Outputs for alps-cherry\2020-10-09\Prints.PDF
 ReleaseManaged3=1
-OutputBasePath3=Project Outputs for alps-cherry
+OutputBasePath3=Project Outputs for Free Documents
 OutputPathMedia3==CurrentDate
 OutputPathMediaValue3==CurrentDate
 OutputPathOutputer3=[Output Type]
@@ -241,7 +241,7 @@ PDFACompliance3=Disabled
 PDFVersion3=Default
 OutputFilePath4=C:\Users\Stefan\Documents\git\Steezy60\Steezy60-ALPS\Project Outputs for alps-cherry\Job1.PDF
 ReleaseManaged4=1
-OutputBasePath4=Project Outputs for alps-cherry
+OutputBasePath4=Project Outputs for Free Documents
 OutputPathMedia4==CurrentDate
 OutputPathMediaValue4==CurrentDate
 OutputPathOutputer4=[Output Type]
@@ -268,7 +268,7 @@ PDFACompliance4=Disabled
 PDFVersion4=Default
 OutputFilePath5=C:\Users\Stefan Sundin\Documents\GitHub\bootlegs\bootleg-1\Project Outputs for alps-cherry\2021-02-17\
 ReleaseManaged5=1
-OutputBasePath5=Project Outputs for alps-cherry
+OutputBasePath5=Project Outputs for Free Documents
 OutputPathMedia5==CurrentDate
 OutputPathMediaValue5==CurrentDate
 OutputPathOutputer5=[Output Type]
