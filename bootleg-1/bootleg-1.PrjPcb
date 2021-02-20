@@ -173,6 +173,35 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
+[Document9]
+DocumentPath=4_bootleg-1-periferals.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=0
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=SOQGEUBL
+
+[GeneratedDocument1]
+DocumentPath=Project Outputs for alps-cherry\Design Rule Check - bootleg-1.html
+DItemRevisionGUID=
+
+[Parameter1]
+Name=ProjectTitle
+Value=bootlegs
+
+[Parameter2]
+Name=Revision
+Value=B1 - MX
+
 [Configuration1]
 Name=Sources
 ParameterCount=0
