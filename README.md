@@ -2,9 +2,7 @@
 
 CAUSION, REVISION B IS UNTESTED AND NO QMK IMPLEMENTATION IS DONE. MAJOR CHANGES TO REVISION B IS LIKELY
 
-# BOOTLEG-1
-- USB-C
-- MX switches
+# BOOTLEG
 - Prophet style flex cuts
 - ARM with plenty of ram and flash, specifics still undecided.
 
