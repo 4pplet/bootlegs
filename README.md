@@ -4,7 +4,8 @@ CAUSION, REVISION B IS UNTESTED AND NO QMK IMPLEMENTATION IS DONE. MAJOR CHANGES
 
 # BOOTLEG
 - Prophet style flex cuts
-- ARM with plenty of ram and flash, specifics still undecided.
+- STM32F103Rx or GD32F103Rx
+- Daughter board connector, ai03 spec.
 
 ## Layout support for BOOTLEG-1 rev B1: 
 ![alt text](./readme-images/layout_support_bootleg-1_rev_B1.jpg "Layout support")
